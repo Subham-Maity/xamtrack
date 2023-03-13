@@ -1,0 +1,23 @@
+{
+  "name": "xamtrack",
+  "version": "1.0.0",
+  "description": "A powerful and flexible API for checklists with Express and mongoose.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Subham-Maity/xamtrack.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Subham-Maity/xamtrack/issues"
+  },
+  "homepage": "https://github.com/Subham-Maity/xamtrack#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
