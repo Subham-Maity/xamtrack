@@ -4,6 +4,9 @@ const app = express();
 // Port
 const PORT = process.env.PORT || 5000;
 
+// Importing the routes
+const tasks_routes = require("./routes/task");
+
 // Home Page
 app.get("/", (req, res) => {
   res.send("Subham's Home Page");
@@ -11,7 +14,7 @@ app.get("/", (req, res) => {
 
 //middleware or to set router
 
-app.use("/api/tasks");
+app.use("/api/tasks" , tasks_routes);
 
 // Async Function
 const start = async () => {
