@@ -9,6 +9,10 @@ app.get("/", (req, res) => {
   res.send("Subham's Home Page");
 });
 
+//middleware or to set router
+
+app.use("/api/tasks");
+
 // Async Function
 const start = async () => {
   try {
