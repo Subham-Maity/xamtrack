@@ -12,12 +12,12 @@ const taskSchema = new mongoose.Schema({
     // it is required and cannot be duplicated
     // use uuidv4 as default value for id field
     id: {
-        type: String,
-        required: [true, "Please provide an id for the task."],
-        trim: true,
-        unique: true,
-        default: uuidv4 
-     },
+       type: String,
+       required: [true, "Please provide an id for the task."],
+       trim: true,
+       unique: true,
+       default: uuidv4 
+    },
     // keep description as it is
     // description is a string that gives more details about the task
     // it is required and trimmed to remove extra whitespace
@@ -55,13 +55,13 @@ const taskSchema = new mongoose.Schema({
    // if not, an error message will be thrown 
 
    dueDate : {
-     type : Date,
-     validate : {
-        validator : function(value) {
-          return value >= this.createdAt;
-        },
-        message : 'Due date must be after creation date.'
-     }
+    type : Date,
+    // validate : {
+    //   validator : function(value) {
+    //     return value >= this.createdAt;
+    //   },
+    //   message : 'Due date must be after creation date.'
+    // }
   },
 
   // keep owner as it is 
