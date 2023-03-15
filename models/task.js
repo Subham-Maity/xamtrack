@@ -3,16 +3,21 @@
 // import mongoose module
 const mongoose = require('mongoose');
 
+// import uuid library and destructure the v4 function
+const { v4: uuidv4 } = require('uuid');
+
 // define the task schema
 const taskSchema = new mongoose.Schema({
     // id is a string that identifies the task uniquely
     // it is required and cannot be duplicated
+    // use uuidv4 as default value for id field
     id: {
-       type: String,
-       required: [true, "Please provide an id for the task."],
-       trim: true,
-       unique: true
-    },
+        type: String,
+        required: [true, "Please provide an id for the task."],
+        trim: true,
+        unique: true,
+        default: uuidv4 
+     },
     // keep description as it is
     // description is a string that gives more details about the task
     // it is required and trimmed to remove extra whitespace
