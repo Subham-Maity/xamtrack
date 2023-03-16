@@ -1,10 +1,14 @@
+const Task = require('../models/Task');
 
 const getAllTasks = async(req, res) => {
-    res.status(200).json({ msg: 'Show all tasks' });
+   const myData = await Task.find({});
+
+    res.status(200).json({ myData });
   };
 
 const getAllTasksTesting = async(req, res) => {
-    res.status(200).json({ msg: 'Show all tasks testing' });
+    const myData = await Task.find({status: "incomplete"});
+    res.status(200).json({ myData });
   };
 
 module.exports = {
