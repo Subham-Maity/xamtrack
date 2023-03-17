@@ -114,7 +114,7 @@ Here are some rules and guidelines for contributing:
   - Solve issues raised by other people or yourself.
   - Well-documented source code with detailed explanations provides a valuable resource for developers and users alike.
 
-Please make sure to follow the [code of conduct](https://github.com/yourusername/task-manager-api/blob/main/CODE_OF_CONDUCT.md) and the [contributing guidelines](https://github.com/yourusername/task-manager-api/blob/main/CONTRIBUTING.md) before making a pull request.
+Please make sure to follow the [code of conduct](https://github.com/Subham-Maity/xamtrack/blob/main/CODE_OF_CONDUCT.md) and the [contributing guidelines](https://github.com/Subham-Maity/xamtrack/blob/main/CONTRIBUTING.md) before making a pull request.
 
 Thank you for your interest and support! :heart:
 
