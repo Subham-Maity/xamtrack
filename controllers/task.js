@@ -4,12 +4,12 @@ const getAllTasks = async (req, res) => {
   const { priority, status } = req.query;
   const queryObject = {};
 
-  if (priority) {
-    queryObject.priority = priority;
-  }
+  if(priority) {
+    queryObject.priority = { $regex: priority, $options: 'i' };
+}
 
   if (status) {
-    queryObject.status = status;
+    queryObject.status = {$regex: status, $options: "i"};
   }
 
   console.log(queryObject);
