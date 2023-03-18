@@ -16,17 +16,12 @@ const getAllTasks = async (req, res) => {
     queryObject.description = { $regex: description, $options: "i" };
   }
 
-  let apiData =Task.find(queryObject);
+  let apiData = Task.find(queryObject);
 
   if (sort) {
     let sortProblem = sort.replace(",", " ");
     apiData = apiData.sort(sortProblem);
   }
-
-
-
-
-
 
   console.log(queryObject);
 
@@ -35,8 +30,14 @@ const getAllTasks = async (req, res) => {
   res.status(200).json({ myData });
 };
 
+
+
+
+
+
+
 const getAllTasksTesting = async (req, res) => {
-  const myData = await Task.find(req.query).sort('-dueDate');
+  const myData = await Task.find(req.query).sort("-dueDate");
 
   res.status(200).json({ myData });
 };
