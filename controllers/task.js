@@ -1,15 +1,19 @@
 const Task = require("../models/Task");
 
 const getAllTasks = async (req, res) => {
-  const { priority, status } = req.query;
+  const { priority, status, description } = req.query;
   const queryObject = {};
 
-  if(priority) {
-    queryObject.priority = { $regex: priority, $options: 'i' };
-}
+  if (priority) {
+    queryObject.priority = { $regex: priority, $options: "i" };
+  }
 
   if (status) {
-    queryObject.status = {$regex: status, $options: "i"};
+    queryObject.status = { $regex: status, $options: "i" };
+  }
+
+  if (description) {
+    queryObject.description = { $regex: description, $options: "i" };
   }
 
   console.log(queryObject);
