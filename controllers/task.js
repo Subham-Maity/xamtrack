@@ -37,7 +37,7 @@ const getAllTasks = async (req, res) => {
 
 
 const getAllTasksTesting = async (req, res) => {
-  const myData = await Task.find(req.query).sort("-dueDate");
+  const myData = await Task.find(req.query).select("dueDate");
 
   res.status(200).json({ myData });
 };
