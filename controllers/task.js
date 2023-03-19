@@ -28,19 +28,28 @@ const getAllTasks = async (req, res) => {
     apiData = apiData.select(selectProblem);
   }
 
+  let page = Number(req.query.page) || 1;
+  let limit = Number(req.query.limit) || 3;
+
+  //formula for skipping
+  let skip = (page - 1) * limit;
+
+  apiData = apiData.skip(skip).limit(limit);
+
   console.log(queryObject);
 
   const myData = await apiData;
 
-  res.status(200).json({ myData });
+  res.status(200).json({ myData, nbHits: myData.length });
 };
 
 
 
 
 
+
 const getAllTasksTesting = async (req, res) => {
-  const myData = await Task.find(req.query).select("dueDate");
+  const myData = await Task.find(req.query).skip(2);
 
   res.status(200).json({ myData });
 };
