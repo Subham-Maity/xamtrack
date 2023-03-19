@@ -29,7 +29,7 @@ const getAllTasks = async (req, res) => {
   }
 
   let page = Number(req.query.page) || 1;
-  let limit = Number(req.query.limit) || 3;
+  let limit = Number(req.query.limit) || 10;
 
   //formula for skipping
   let skip = (page - 1) * limit;
