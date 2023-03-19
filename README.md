@@ -1,5 +1,7 @@
 # xamtrack ⚡
 
+> ### [Temporary Deploy Check HERE](https://xamtrack.up.railway.app/api/tasks/)
+
 **Xamtrack API** is a simple and easy-to-use RESTful API that allows you to manage a list of tasks. You can create, read, update and delete tasks using HTTP methods and JSON data. Whether you need to keep track of your personal projects, your work assignments or your daily chores, **Xamtrack API** can help you organize your tasks and monitor your progress. :sparkles:
 
 ## [Documentation](https://codexam.vercel.app/docs/project/xt)
