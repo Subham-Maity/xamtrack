@@ -1,7 +1,7 @@
 const Task = require("../models/Task");
 
 const getAllTasks = async (req, res) => {
-  const { priority, status, description, sort } = req.query;
+  const { priority, status, description, sort, select } = req.query;
   const queryObject = {};
 
   if (priority) {
@@ -23,14 +23,17 @@ const getAllTasks = async (req, res) => {
     apiData = apiData.sort(sortProblem);
   }
 
+  if (select) {
+    let selectProblem = select.split(",").join(" ");
+    apiData = apiData.select(selectProblem);
+  }
+
   console.log(queryObject);
 
   const myData = await apiData;
 
   res.status(200).json({ myData });
 };
-
-
 
 
 
