@@ -45,7 +45,7 @@ The base URL for the API is `http://localhost:5000`. The following endpoints are
 | Method | Endpoint      | Description                                      |
 | ------ | ------------- | ------------------------------------------------ |
 | GET    | /tasks        | Returns a list of all tasks                      |
-| GET    | /tasks/:id    | Returns the details of a single task with the id |
+| GET    | /api/tasks?select=id,description   | Returns the details of a single task with the id |
 | POST   | /tasks        | Creates a new task                               |
 | PUT    | /tasks/:id    | Updates the task with the id                     |
 | DELETE | /tasks/:id    | Deletes the task with the id                     |
