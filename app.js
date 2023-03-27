@@ -2,7 +2,7 @@
 require('dotenv').config()
 
 const express = require("express");
-const app = express();
+// const app = express();
 const connectDB = require('./db/connect');
 
 // Port
